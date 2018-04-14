@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Pokemon Info</title>
+	<link rel="stylesheet" type="text/css" href="http://yui.yahooapis.com/3.18.1/build/cssreset/cssreset-min.css">
+	<link rel="stylesheet" type="text/css" href="style.css">
+	<link href="https://fonts.googleapis.com/css?family=Lato" rel="stylesheet">
+	<link rel="stylesheet" type="text/css" href="animate.css">
+	<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.7.2/Chart.js"></script>
+</head>
+<body>
+	<header>
+		<img class="hero-image" src="pokeball.png">
+		<form id="pokeForm">
+			<input type="text" id="pokeInput" placeholder="Enter A Name Of A Pokemon">
+			<button id="pokeButton" type="button" onclick="getID()">Search</button>
+			
+		</form>
+		
+	</header>
+	<div id="info">
+		<div id="image">
+			<img id="img">
+		</div>
+		<div id="text">
+			<p class="text" id="n_number"></p>
+			<p class="text" id="Name"></p>
+			<p class="text" id="Abilities"></p>
+			<p class="text" id="Types"></p>
+			<p class="text" id="Weight"></p>
+			<p class="text" id="Height"></p>
+		</div>
+	</div>
+	<div id="stats">
+		<canvas id="statChart" height="500" width="500"></canvas>
+	</div>
+	<script type="text/javascript" src="logic.js"></script>
+</body>
+</html>

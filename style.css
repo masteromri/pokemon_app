@@ -1,0 +1,75 @@
+body{
+	font-family: "Lato", sans-serif;
+}
+header{
+	height: 450px;
+	width: 100%;
+	background-color: #fce132;
+	text-align:center;
+}
+
+.hero-image{
+	display:inline-block;
+	margin: 0 auto;
+	height: 256px;
+	width: 256px;
+	margin-top: 50px;
+}
+
+#pokeForm{
+	margin-top: 25px;
+}
+
+#pokeInput{
+	border: none;
+	height: 45px;
+	width: 400px;
+	box-shadow: 0 3px 6px rgba(0,0,0,0.16), 0 3px 6px rgba(0,0,0,0.23);
+}
+
+
+#pokeInput[placeholder]{
+	padding-left: 10px;
+}
+
+@media screen and (max-width: 600px){
+	#pokeInput{
+		width: 250px;
+	}
+}
+
+#pokeButton{
+	border: none;
+	height: 40px;
+	width: 100px;
+	background-color: #F8333C;
+	color: white;
+	display: block;
+	margin: 0 auto;
+	margin-top: 15px;
+	border-radius: 10px;
+	cursor: pointer;
+	box-shadow: 0 3px 6px rgba(0,0,0,0.16), 0 3px 6px rgba(0,0,0,0.23);
+}
+
+#pokeButton:hover{
+	background-color: #F21B3F;
+}
+
+
+#info{
+	text-align: center;
+	height: 350px;
+}
+
+#text{
+	margin-top: 25px;
+}
+
+.text{
+	padding: 5px;
+}
+
+#image{
+	display: none;
+}
