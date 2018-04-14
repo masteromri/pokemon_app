@@ -76,3 +76,8 @@ header{
 #image{
 	display: none;
 }
+
+#stats{
+	margin-top: 15px;
+	padding: 5px;
+}
