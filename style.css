@@ -36,6 +36,9 @@ header{
 }
 
 @media screen and (max-width: 600px){
+	header{
+		width: 100vh;
+	}
 	#pokeInput{
 		width: 250px;
 	}
