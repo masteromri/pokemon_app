@@ -36,6 +36,12 @@ header{
 }
 
 @media screen and (max-width: 600px){
+	html{
+		width: 100%;
+	}
+	body{
+		width: 100%;
+	}
 	header{
 		width: 100vh;
 	}
