@@ -805,17 +805,17 @@ var pokemons = [
 
 //Elements
 
-var n_number_element = document.querySelector("#n_number")
-var name_element = document.querySelector("#Name")
-var abilities_element = document.querySelector("#Abilities")
-var types_element = document.querySelector("#Types")
-var weight_element = document.querySelector("#Weight")
-var height_element = document.querySelector("#Height")
-var image_div =  document.querySelector("#image")
-var image_element = document.querySelector("#img")
+var n_number_element = document.querySelector("#n_number");
+var name_element = document.querySelector("#Name");
+var abilities_element = document.querySelector("#Abilities");
+var types_element = document.querySelector("#Types");
+var weight_element = document.querySelector("#Weight");
+var height_element = document.querySelector("#Height");
+var image_div =  document.querySelector("#image");
+var image_element = document.querySelector("#img");
 
 
-//ANimation elements 
+//Animation elements for Animate.css 
 
 var text_div = document.querySelector("#info")
 
@@ -829,22 +829,21 @@ var chart_div = document.querySelector("#stats")
 // get pokemon
 
 function getID(){
-	var inputPokemon = document.querySelector("#pokeInput").value
-	var pokemonIndex = pokemons.indexOf(inputPokemon)
-	var pokemonID = pokemonIndex + 1
-	fetch("https://pokeapi.co/api/v2/pokemon/"+pokemonID+"/")  //Access the API
+	var inputPokemon = document.querySelector("#pokeInput").value //getting the name of pokemon
+	var pokemonIndex = pokemons.indexOf(inputPokemon) // Finding the id of pokemon from the pokemon array
+	var pokemonID = pokemonIndex + 1 //for poke API
+	fetch("https://pokeapi.co/api/v2/pokemon/"+pokemonID+"/")  //Accessing the API
 	.then(response => response.json())
 	.then(data => {
-		text_div.className = "animated zoomIn"
-		chart_div.className = "animated zoomIn"
+		text_div.className = "animated zoomIn"; //Animation Class for using animate.css
+		chart_div.className = "animated zoomIn"; //Animation Class for using animate.css
 		var abilities = [];    //abilities Array
 		var name = inputPokemon;  //Name
 		var base_experience = data.base_experience;  //base experience
 		var weight = data.weight/10; //weight
 		var height = data.height*10; //height
 		var types = []; // types of pokemon array
-		var images = data.sprites.front_default;
-		var stats = [];
+		var stats = []; // Stats of pokemon array
 		for(var i in data.stats){
 			stats.push(data.stats[i].base_stat)
 		}
@@ -852,7 +851,7 @@ function getID(){
 			abilities.push(data.abilities[i].ability.name);      //Access the abilities from the API and push to the abilities array
 		}
 		for(var i in data.types){
-			types.push(data.types[i].type.name)     //Access the types
+			types.push(data.types[i].type.name);     //Access the types
 		}
 		n_number_element.innerHTML = "<b>National no: </b>"+pokemonID;
 		name_element.innerHTML = "<b>Name: </b>"+name;
@@ -862,7 +861,7 @@ function getID(){
 		height_element.innerHTML = "<b>Height: </b>"+height+"cm";
 		image_div.style.display = 'block';
 		image_element.src = data.sprites.front_default;
-		console.log(stats)
+		console.log(stats);
 		var ctx = document.getElementById("statChart");
 		if(window.bar != undefined)
 			window.bar.destroy();
