@@ -25,6 +25,12 @@ header{
 	height: 256px;
 	width: 256px;
 	margin-top: 50px;
+	transition-duration: 500ms;
+}
+
+.hero-image:hover{
+	height: 300px;
+	width: 300px;
 }
 
 #pokeForm{
