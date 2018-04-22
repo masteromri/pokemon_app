@@ -892,4 +892,12 @@ function getID(){
 		})
 
 	})
+	.catch((error) => {
+		alert("Pokemon Not Found")
+	})
+}
+
+window.addEventListener("load", myFunction());
+function myFunction(){
+	document.querySelector(".overlay").style.display = 'none';
 }
