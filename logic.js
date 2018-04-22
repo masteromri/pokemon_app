@@ -1,3 +1,4 @@
+document.querySelector(".overlay").style.display = 'block';
 var pokemons = [
 	"Bulbasaur",
 	"Ivysaur",
@@ -896,6 +897,7 @@ function getID(){
 		alert("Pokemon Not Found")
 	})
 }
+
 
 window.addEventListener("load", myFunction());
 function myFunction(){
