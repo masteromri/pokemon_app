@@ -893,7 +893,9 @@ function getID(){
 
 	})
 	.catch((error) => {
-		alert("Pokemon Not Found")
+		alert("Pokemon Not Found");
+		text_div.style.display = "none";
+		chart_div.style.display = "none";
 	})
 }
 
