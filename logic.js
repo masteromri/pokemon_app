@@ -1,4 +1,3 @@
-document.querySelector(".overlay").style.display = 'block';
 var pokemons = [
 	"Bulbasaur",
 	"Ivysaur",
