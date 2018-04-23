@@ -898,10 +898,4 @@ function getID(){
 }
 
 
-window.addEventListener("load", myFunction());
-function myFunction(){
-	document.querySelector(".overlay").style.display = 'block';
-	setTimeout(3000);
-	console.log("Hi");
-	document.querySelector(".overlay").style.display = 'none';
-}
+
