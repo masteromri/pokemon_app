@@ -902,4 +902,5 @@ function getID(){
 window.addEventListener("load", myFunction());
 function myFunction(){
 	document.querySelector(".overlay").style.display = 'none';
+	console.log("Hi")
 }
