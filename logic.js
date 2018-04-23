@@ -900,6 +900,6 @@ function getID(){
 
 window.addEventListener("load", myFunction());
 function myFunction(){
-	document.querySelector(".overlay").style.display = 'none';
+	document.querySelector(".overlay").style.display = 'block';
 	console.log("Hi")
 }
