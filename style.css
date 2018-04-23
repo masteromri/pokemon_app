@@ -91,6 +91,7 @@ header{
   position: absolute;
   -webkit-animation: sk-rotateplane 1.2s infinite ease-in-out;
   animation: sk-rotateplane 1.2s infinite ease-in-out;
+  display: "none";
 }
 
 @-webkit-keyframes sk-rotateplane {
