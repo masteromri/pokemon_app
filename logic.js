@@ -835,6 +835,8 @@ function getID(){
 	fetch("https://pokeapi.co/api/v2/pokemon/"+pokemonID+"/")  //Accessing the API
 	.then(response => response.json())
 	.then(data => {
+		text_div.style.display = "block";
+		chart_div.style.display = "block";
 		text_div.className = "animated zoomIn"; //Animation Class for using animate.css
 		chart_div.className = "animated zoomIn"; //Animation Class for using animate.css
 		var abilities = [];    //abilities Array
@@ -861,7 +863,8 @@ function getID(){
 		height_element.innerHTML = "<b>Height: </b>"+height+"cm";
 		image_div.style.display = 'block';
 		image_element.src = data.sprites.front_default;
-		console.log(stats);
+		
+		//Creating the chart
 		var ctx = document.getElementById("statChart");
 		if(window.bar != undefined)
 			window.bar.destroy();
