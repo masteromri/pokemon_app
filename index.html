@@ -3,19 +3,19 @@
 <head>
 	<title>Pokemon Info</title>
 	<link rel="stylesheet" type="text/css" href="style.css">
+	<link rel="stylesheet" type="text/css" href="loader.css">
 	<link href="https://fonts.googleapis.com/css?family=Lato" rel="stylesheet">
 	<link rel="stylesheet" type="text/css" href="animate.css">
 	<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.7.2/Chart.js"></script>
 </head>
 <body>
+	<div id="loader">Loading...</div>
 	<header>
 		<img class="hero-image" src="pokeball.png">
 		<form id="pokeForm">
 			<input type="text" id="pokeInput" placeholder="Enter A Name Of A Pokemon">
 			<button id="pokeButton" type="button" onclick="getID()">Search</button>
-			
 		</form>
-		
 	</header>
 	<div id="info">
 		<div id="image">
